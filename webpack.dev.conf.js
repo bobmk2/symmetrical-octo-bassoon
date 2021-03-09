@@ -6,6 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 const babelOptions = {
   plugins: ['react-hot-loader/babel'],
+  presets: ['@emotion/babel-preset-css-prop'],
   cacheDirectory: true
 };
 

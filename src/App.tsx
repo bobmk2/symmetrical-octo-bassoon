@@ -1,4 +1,4 @@
-import React from 'react';
+import { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { TopPage } from './pages/TopPage';
@@ -23,7 +23,7 @@ const MyRouter = (props: PropTypes) => {
   );
 };
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return <MyRouter />;
   }

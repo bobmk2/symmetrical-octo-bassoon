@@ -1,8 +1,13 @@
-import React from 'react';
 import * as ReactDOM from 'react-dom';
 import './static-css';
 
 import App from './App';
+import { RecoilRoot } from 'recoil';
 
 const rootElement = document.getElementById('app');
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+  <RecoilRoot>
+    <App />
+  </RecoilRoot>,
+  rootElement
+);

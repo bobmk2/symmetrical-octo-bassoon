@@ -14,7 +14,12 @@ module.exports = {
     'react/jsx-uses-react': [1],
     'react/jsx-uses-vars': [2],
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': [
+      'warn',
+      {
+        additionalHooks: 'useRecoilCallback'
+      }
+    ],
     'space-before-function-paren': ['error', { anonymous: 'never', named: 'never', asyncArrow: 'always' }],
     'no-prototype-builtins': 'off',
     '@typescript-eslint/no-inferrable-types': 'off',
