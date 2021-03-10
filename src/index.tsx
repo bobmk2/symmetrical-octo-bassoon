@@ -1,5 +1,4 @@
 import * as ReactDOM from 'react-dom';
-import './static-css';
 
 import App from './App';
 import { RecoilRoot } from 'recoil';

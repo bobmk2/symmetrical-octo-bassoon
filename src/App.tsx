@@ -8,7 +8,7 @@ type PropTypes = {
 };
 
 /**
- * ルーティング設定
+ * Routing
  */
 const MyRouter = (props: PropTypes) => {
   return (
