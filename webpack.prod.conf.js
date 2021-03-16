@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const babelOptions = {
   presets: ['@emotion/babel-preset-css-prop'],
@@ -66,6 +67,11 @@ module.exports = {
           to: path.resolve(__dirname, 'dist', 'static', 'resources')
         }
       ]
+    }),
+    new ESLintPlugin({
+      fix: false,
+      extensions: ['js', 'jsx', 'ts', 'tsx'],
+      emitError: true
     })
   ],
   optimization: {
@@ -98,14 +104,6 @@ module.exports = {
             loader: 'ts-loader',
             options: {
               transpileOnly: true
-            }
-          },
-          {
-            loader: 'eslint-loader',
-            options: {
-              fix: false,
-              emitErrors: true,
-              enforce: 'pre'
             }
           }
         ]
